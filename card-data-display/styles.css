@@ -1,0 +1,265 @@
+@font-face {
+  font-family: 'CredCardFont';
+  src: url('./fonts/CREDC___.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Space Grotesk';
+  src: url('./fonts/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7aUXskPMA.woff2') format('truetype');
+  
+}
+:root {
+    --shadow-color: 286deg 36% 64%;
+    --shadow-elevation-low:
+      0px 0.5px 0.7px hsl(var(--shadow-color) / 0.15),
+      0px 1.6px 2.2px -1px hsl(var(--shadow-color) / 0.38);
+    --shadow-elevation-medium:
+      0px 0.5px 0.7px hsl(var(--shadow-color) / 0.21),
+      -0.1px 7.9px 10.7px -1px hsl(var(--shadow-color) / 0.54);
+    --shadow-elevation-high:
+      0px 0.5px 0.7px hsl(var(--shadow-color) / 0.27),
+      -0.2px 9.6px 13px -0.5px hsl(var(--shadow-color) / 0.53),
+      -0.5px 33.8px 45.6px -1px hsl(var(--shadow-color) / 0.8);
+  }
+
+body {
+  background: rgb(170, 170, 170);
+}
+  
+.cardfront_wrapper {
+  position: relative;
+  top: 100px;
+  left: 450px;
+}
+
+.card_front {
+    background-image: url(images/cardfront.jpg) ;
+    position: relative;
+    width: 24rem; 
+    height: 13rem;
+    background-size: 100% 400%;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-elevation-high);
+}
+
+.logo_placeholder1 {
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 3rem;
+  top: 2.5rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 100%;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+  -1px -1px 2px rgba(255, 255, 255, 0.3);
+  
+}
+
+.logo_placeholder2 {
+  background-color: transparent;
+  position: absolute;
+  left: 5rem;
+  top: 2.5rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  outline: 1px solid #ffffff;
+  transform: translate(-50%, -50%);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+  inset -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.card_number {
+  position: absolute;
+  top: 60%;
+  left: 7.6%;
+  transform: translateY(-50%);
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: repeat(4, 75px);
+  gap: 10px;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+  -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.card_number span {
+  text-align: center;
+}
+
+
+.cardholder_name {
+  text-align: left;                /* texto começa à esquerda */
+  position: absolute;
+  top: 77.5%;
+  left: 8.2%;                       /* fixa a borda esquerda */
+  transform: translateY(-50%);     /* move só verticalmente */
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ffffff;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+  -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.exp_date {
+  text-align: left;                
+  position: absolute;
+  top: 77.5%;
+  right: 7.2%;                       
+  transform: translateY(-50%);     
+  font-family: 'Space Grotesk', sans-serif;
+  color: #ffffff;
+  display: flex;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+  -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.month .year {
+  text-align: center;
+}
+
+.center {
+  background-color:black; 
+  height: 30rem;
+  width: 3px;
+  position: absolute;
+  right: 7.2%;
+  opacity: 0%;
+  z-index: 1;
+}
+
+.cardback_wrapper {
+  position: relative;
+  top: 50px;
+  left: 450px;
+}
+
+.card_back {
+    background-image: url(images/cardback.jpg) ;
+    position: relative;
+    width: 24rem; 
+    height: 13rem;
+    background-size: 100% 400%;
+    border-radius: 1rem;
+    box-shadow: var(--shadow-elevation-high);
+  }
+
+.dim_dark {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(199, 199, 199);
+  opacity: 15%;
+  border-radius: 1rem;
+  z-index: 1;
+}
+
+
+
+.backside_line {
+    background-color: #2f2f2f;
+    width: 100%;
+    height: 40px;
+    position: absolute; top: 30px;
+    box-shadow: var(--shadow-elevation-low);
+}
+
+.cvv_line {
+    background-color: #adb5bf;
+    width: 75%;
+    height: 25px;
+    position: absolute; bottom: 90px; left: 3rem;
+    border-radius: 4px;
+    outline: 1px solid #adb5bf;
+    box-shadow: var(--shadow-elevation-medium);
+}
+
+.cvv_text {
+color: transparent;
+font-family: 'CredCardFont', sans-serif;
+font-size: 16px;
+font-weight: 575;
+opacity: 0.5;
+text-align: end;
+text-shadow: #adb5bf -4px 5px 4px, 
+             rgba(0, 0, 0, 0.6) -4px 3.5px,
+             rgba(0, 0, 0, 0.5) -4px 4px;
+background-clip: text;
+-webkit-background-clip: text;
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+
+.mockup_text {
+  background-color: #ffffff;
+  height: 4px;
+  border-radius: 2px;
+  opacity: 0.3;
+  margin: 4px 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);  
+  box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.8),
+              inset -1px -1px 2px rgba(255, 255, 255, 0.3);
+}
+
+.skeleton1 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 4px;                 
+  position: absolute;      
+  bottom: 30%;             
+  left: 50%;              
+  transform: translateX(-50%);  
+  width: 100%;    
+}
+
+.line_1 {width: 24%; left: 44%;} /*left = 26%*/
+.line_2 {width: 4%; left: 59%;} /*size = 37%/2 = 18.5*/
+.line_3 {width: 4%; left: 64%;} /*start at 31.5 end at 68.5*/
+.line_4 {width: 2%; left: 68%;} /*+1% = 63%*/
+
+.skeleton2 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 4px;                 
+  position: absolute;      
+  bottom: 25%;             
+  left: 50%;              
+  transform: translateX(-50%);  
+  width: 100%;
+}
+
+.line_5 {width: 4%; left: 37%; } /*left = 32%*/
+.line_6 {width: 10%; left: 45%;} /*size = %/2 = */
+.line_7 {width: 12%; left: 57%;} /*start at  end at 68.5*/
+.line_8 {width: 2%; left: 65%;} /*% = %*/
+
+.skeleton3 {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  gap: 4px;                 
+  position: absolute;      
+  bottom: 20%;             
+  left: 50%;              
+  transform: translateX(-50%);  
+  width: 100%;  
+}
+
+.line_9 {width: 2%; left: 33%;} /*+1% = 63%*/
+.line_10 {width: 4%; left: 37%;} /*start at 31.5 end at 68.5*/
+.line_11 {width: 4%; left: 42%;} /*size = 37%/2 = 18.5*/
+.line_12 {width: 24%; left: 57%;} /*left = 26%*/
