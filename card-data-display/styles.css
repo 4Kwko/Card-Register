@@ -93,11 +93,11 @@ body {
 
 
 .cardholder_name {
-  text-align: left;                /* texto começa à esquerda */
+  text-align: left;               
   position: absolute;
   top: 77.5%;
-  left: 8.2%;                       /* fixa a borda esquerda */
-  transform: translateY(-50%);     /* move só verticalmente */
+  left: 8.2%;                       
+  transform: translateY(-50%);    
   font-family: 'Space Grotesk', sans-serif;
   color: #ffffff;
   display: flex;
